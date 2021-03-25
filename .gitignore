@@ -17,3 +17,7 @@ hichembananetest2.xml
 samplefruit.xml
 /Validation65/
 /Training65/
+/ssd_mobilenet_v2_coco/
+/faster_rcnn_nas_coco/
+/frozen_inference_graph.pb
+ssd_mobilenet_v2_coco.engine
