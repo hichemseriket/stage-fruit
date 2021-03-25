@@ -1,4 +1,28 @@
 ici je doit deja expliqué les installation necessaire
+/////////////////////////////////////////////////////////
+
+veuillez verifiez d'abord la compatibilté de votre gpu avec tensorflow sur : https://www.tensorflow.org/install/gpu
+
+dans le cas ou votre gpu n'est pas compatible vous aurez qu'a utilisé tensorflow qui va faire les calcul sur CPU chose qui prendrais bcp de temps mais cela fonctionnera quand meme
+
+pour l'environement j'ai utilisé :
+python 3.8
+tensorflow 2.4 avec support gpu
+cuda 11.2
+cuDNN 8
+
+1 : j'ai utlisé visual studio pour installé CUDA Toolkit
+2 : installer CUDA Toolkit
+3: telechargez et installer cuDNN : pour cela telecharger cuDNN sur le site de nvidia
+    dezzipez le puis coupez et coller les fichier contenu dans cuDNN dans le dossier qui contient CUDA ( je tacherais de mieux l'expliquer)
+4 :  n'oubliez pas de mettre les path dans les parametre d'environnement si ce n'est pas fait automatiquement a l'installation de cuda et de cudnn
+5 : installez python
+6 : installez Tensorflow avec support GPU avec la commande en mode admin : pip3 install --upgrade tensorflow-gpu
+testez tensorflow avec la commande : import tensorflow as tf
+testez cuda avec la commande : tf.test.is_built_with_cuda()
+testez la compatibility gpu avec tensorflow avec la commande : tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
+
+///////////////////////////////////////////////////////////////
 
 l'environnement conda tensorflow et les dependance et commenet jai créé mon environement python pour tensorflow gpu
 
