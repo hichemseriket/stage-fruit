@@ -18,13 +18,29 @@ cuDNN 8
 4 :  n'oubliez pas de mettre les path dans les parametre d'environnement si ce n'est pas fait automatiquement a l'installation de cuda et de cudnn
 5 : installez python
 6 : installez Tensorflow avec support GPU avec la commande en mode admin : pip3 install --upgrade tensorflow-gpu
-testez tensorflow avec la commande : import tensorflow as tf
+testez tensorflow (dans python) avec la commande : import tensorflow as tf
 testez cuda avec la commande : tf.test.is_built_with_cuda()
 testez la compatibility gpu avec tensorflow avec la commande : tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
 
+en gros moi ce que je fait je creer un script python que j'aoppel test.py dans lequel je mets :
+
+import tensorflow as tf
+tf.test.is_built_with_cuda()
+tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
+et je regard le resultat dans la console le premier devrait rendre : successfully opened dynamic liberary cudart64_110.dll 110 selon la version moi cest la 11
+le deuxieme devrait rendre : This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Successfully opened dynamic library nvcuda.dll
+et vous verrez le nom de votre gpu deffiler aussi
+
 ///////////////////////////////////////////////////////////////
 
-l'environnement conda tensorflow et les dependance et commenet jai créé mon environement python pour tensorflow gpu
+pour le dev j'ai créé un environnement avec toutes les dependances via anaconda
+j'ai installé dedans :tensorflow Gpu et les dependance necessaire
+
+//////////////////////////////////////////////////
+explication sur les script contenu dans le github :
+
 
 cnn.py : jai fait un script pour entrainer et sortir un model capable de reconnaitre 65 fruit : model.h5
 
