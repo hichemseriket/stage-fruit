@@ -68,7 +68,7 @@ app.py : dedans un serveur web pour testé la reconnaissance dde fruit selon le 
 cnn-new-more-fruit : un autre reseau de nouronne capable d'entrainer un model a reconnaitre plus de fruit ici jai mis 65 classes
 
 
-Quand je rajoute des data entrainement et test il faut changer le path si besoin , les classes dans le app et dans le script qui lance la video
+Quand je rajoute des data entrainement et test il faut changer le path si besoin , les classes dans le app et dans le script qui lance la video 
 Faut surtout changer le nombre de neuronne en sortie en allant dans la fonction qui ajoute les denses "neuronnes" et changer le parametre "unit" dans la ligne ou on fait le softmax au nombre de sortie qui est le nombre de classes
 
 ////////////////////////////////////////////////
