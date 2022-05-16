@@ -96,7 +96,7 @@ labels = {
 MODEL_NAME = 'reconnaissance-objet/ssd_mobilenet_v2_coco'
 # MODEL_NAME='faster_rcnn_nas_coco'
 # le frozen actuel est celui du faster
-PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/reconnaissance-objet/ssd_mobilenet_v2_coco/frozen_inference_graph.pb.pb'
+PATH_TO_FROZEN_GRAPH = MODEL_NAME + 'frozen_inference_graph.pb.pb'
 color_infos = (255, 255, 0)
 
 detection_graph = tf.Graph()
